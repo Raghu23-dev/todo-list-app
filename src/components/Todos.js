@@ -18,9 +18,19 @@ const mapDispatchToProps = (dispatch) => {
 
 const Todos = (props) => {
   const [todo, setTodo] = useState("");
+  const [priority, setPriority] = useState("Medium");
+  const [dueDate, setDueDate] = useState(new Date().toISOString().split('T')[0]);
 
   const handleChange = (e) => {
     setTodo(e.target.value);
+  };
+
+  const handlePriorityChange = (e) => {
+    setPriority(e.target.value);
+  };
+
+  const handleDateChange = (e) => {
+    setDueDate(e.target.value);
   };
 
   const add = () => {
@@ -31,11 +41,13 @@ const Todos = (props) => {
         id: Math.floor(Math.random() * 1000),
         item: todo,
         completed: false,
+        priority: priority,
+        dueDate: dueDate,
       });
       setTodo("");
     }
   };
-  //console.log("props from store", props);
+
   return (
     <div className="addTodos">
       <input
@@ -44,7 +56,16 @@ const Todos = (props) => {
         className="todo-input"
         value={todo}
       />
-
+      <select onChange={handlePriorityChange} value={priority}>
+        <option value="High">High</option>
+        <option value="Medium">Medium</option>
+        <option value="Low">Low</option>
+      </select>
+      <input
+        type="date"
+        onChange={handleDateChange}
+        value={dueDate}
+      />
       <motion.button
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
@@ -57,5 +78,5 @@ const Todos = (props) => {
     </div>
   );
 };
-//we can use connect method to connect this component with redux store
+
 export default connect(mapStateToProps, mapDispatchToProps)(Todos);

@@ -18,6 +18,12 @@ const TodoItem = (props) => {
     }
   };
 
+  const priorityStyles = {
+    High: { color: 'red' },
+    Medium: { color: 'orange' },
+    Low: { color: 'green' },
+  };
+
   return (
     <li key={item.id} className="card">
       <textarea
@@ -40,9 +46,11 @@ const TodoItem = (props) => {
         )}
         <button style={{ color: "red" }} onClick={() => removeTodo(item.id)}>
           <IoClose />
-        </button>{" "}
+        </button>
       </div>
       {item.completed && <span className="completed">Done</span>}
+      <span style={priorityStyles[item.priority]}>{item.priority}</span>
+      <span>{item.dueDate}</span>
     </li>
   );
 };

@@ -6,5 +6,3 @@ const store = configureStore({
 });
 
 export default store;
-
-//Connect this to app
