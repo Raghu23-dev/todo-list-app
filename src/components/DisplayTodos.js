@@ -42,13 +42,42 @@ const DisplayTodos = (props) => {
                     item={item}
                     removeTodo={props.removeTodo}
                     updateTodo={props.updateTodo}
+                    completeTodos={props.completeTodo}
+                  />
+                )
+              );
+            })
+          : null}
+          {/*For completed items*/}
+        {props.todos.length > 0 && sort === "completed"
+          ? props.todos.map((item) => {
+              return (
+                item.completed === true && (
+                  <TodoItem
+                    key={item.id}
+                    item={item}
+                    removeTodo={props.removeTodo}
+                    updateTodo={props.updateTodo}
                     completeTodo={props.completeTodo}
                   />
                 )
               );
             })
           : null}
-        ,
+          {/*for all items*/}
+          {props.todos.length > 0 && sort === "all"
+          ? props.todos.map((item) => {
+              return (
+                  <TodoItem
+                    key={item.id}
+                    item={item}
+                    removeTodo={props.removeTodo}
+                    updateTodo={props.updateTodo}
+                    completeTodos={props.completeTodo}
+                  />
+                )
+            })
+          : null}
       </ul>
     </div>
   );
