@@ -1,0 +1,99 @@
+/**
+https://fonts.google.com/selection?query=google
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+html {
+  line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(45deg,#d2001a, #7462ff, #f48e21, #23d5ab);
+    background-size: 300% 300%;
+    animation: color 6s ease-in-out infinite;
+}
+
+@keyframes color {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.App {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.App h1 {
+    display: inline;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+}
+.App h4 {
+    display: inline;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.addTodos{
+    display: flex;
+    justify-content: center;
+}
+
+.todo-input{
+    min-width:15rem;
+    width:40vw;
+    max-height:2.5rem;
+    background-color:#e1ebfd;
+    border:none;
+    border-radius:5px;
+    padding:0.5rem 1rem;
+    align-self: center;
+}
+
+.todo-input:focus{
+    outline:none;
+    border:2px solid #433aa8;
+
+}
+
+.add-btn{
+    margin-left: 1rem;
+    padding-top:0.3rem;
+    background-color: #271c6c;
+    color:#e1ebfd;
+    border-radius: 50%;
+    border: 2px solid #e1ebfd;
+    font-size:1.5rem;
+    width:3.2rem;
+    height: 3.2rem;
+    cursor:pointer;
+    box-shadow: 2px 4px 10px #271c6c;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
