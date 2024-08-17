@@ -1,10 +1,16 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
-import store from "../redux/store";
+import { addTodos } from "../redux/reducer";
 
 const mapStateToProps = (state) => {
   return {
     todos: state,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    addTodo: (obj) => dispatch(addTodos(obj)),
   };
 };
 
@@ -22,10 +28,21 @@ const Todos = (props) => {
         onChange={(e) => handleChange(e)}
         className="todo-input"
       />
-      <button className="add-btn">Add</button>
+      <button
+        className="add-btn"
+        onClick={() =>
+          props.addTodo({
+            id: Math.floor(Math.random() * 1000),
+            item: todo,
+            completed: false,
+          })
+        }
+      >
+        Add
+      </button>
     </div>
   );
 };
 
 //Connect method is used to connect this component with redux store
-export default connect(mapStateToProps, null)(Todos);
+export default connect(mapStateToProps, mapDispatchToProps)(Todos);
