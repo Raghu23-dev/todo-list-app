@@ -1,11 +1,19 @@
 import React, { useState } from "react";
+import { connect } from "react-redux";
+import store from "../redux/store";
 
-const Todos = () => {
+const mapStateToProps = (state) => {
+  return {
+    todos: state,
+  };
+};
+
+const Todos = (props) => {
   const [todo, setTodo] = useState("");
   const handleChange = (e) => {
     setTodo(e.target.value);
   };
-  //console.log("testing-input-text", todo);
+  console.log("props from store", props);
 
   return (
     <div className="addTodos">
@@ -19,4 +27,5 @@ const Todos = () => {
   );
 };
 
-export default Todos;
+//Connect method is used to connect this component with redux store
+export default connect(mapStateToProps, null)(Todos);
