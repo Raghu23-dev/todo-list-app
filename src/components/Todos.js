@@ -39,13 +39,16 @@ const Todos = (props) => {
       />
       <button
         className="add-btn"
-        onClick={() =>
-          props.addTodo({
-            id: Math.floor(Math.random() * 1000),
-            item: todo,
-            completed: false,
-          })
-        }
+        onClick={() => {
+          if (todo.trim() !== "") {
+            props.addTodo({
+              id: Math.floor(Math.random() * 1000),
+              item: todo,
+              completed: false,
+            });
+            setTodo(""); // Clear input after adding
+          }
+        }}
       >
         Add
       </button>

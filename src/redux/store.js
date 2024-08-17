@@ -7,4 +7,4 @@ const store = configureStore({
 
 export default store;
 
-//Connec this to app
+//Connect this to app

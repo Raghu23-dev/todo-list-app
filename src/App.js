@@ -1,5 +1,5 @@
 import logo from "./logo.svg";
-import "./App.css";
+import "./css/main.css";
 import Todos from "./components/Todos";
 import DisplayTodos from "./components/DisplayTodos";
 

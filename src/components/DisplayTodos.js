@@ -58,7 +58,7 @@
                         item={item}
                         removeTodo={props.removeTodo}
                         updateTodo={props.updateTodo}
-                        completeTodo={props.completeTodo}
+                        completeTodos={props.completeTodos}
                     />
                     )
                 );
