@@ -49,8 +49,8 @@ const TodoItem = (props) => {
         </button>
       </div>
       {item.completed && <span className="completed">Done</span>}
-      <span style={priorityStyles[item.priority]}>{item.priority}</span>
-      <span>{item.dueDate}</span>
+      <span className="priority-dd-show" style={priorityStyles[item.priority]}>{item.priority}<span className="date-dd-show">{item.dueDate}</span></span>
+      
     </li>
   );
 };
