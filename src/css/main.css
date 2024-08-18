@@ -20,257 +20,245 @@ html {
 }
 
 body {
-    height: 100vh;
-    width: 100%;
-    background: linear-gradient(45deg,#d2001a, #7462ff, #f48e21, #23d5ab);
-    background-size: 300% 300%;
-    animation: color 6s ease-in-out infinite;
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(45deg, #d2001a, #7462ff, #f48e21, #23d5ab);
+  background-size: 300% 300%;
+  animation: color 6s ease-in-out infinite;
 }
 
 @keyframes color {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .App {
-    margin-top: 1rem;
-    display: flex;
-    flex-direction: column;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .App h1 {
-    display: inline;
-    text-align: center;
-    margin-bottom: 0.5rem;
+  display: inline;
+  text-align: center;
+  margin-bottom: 0.5rem;
 }
 .App h4 {
-    display: inline;
-    text-align: center;
-    margin-bottom: 0.5rem;
+  display: inline;
+  text-align: center;
+  margin-bottom: 0.5rem;
 }
 
-.addTodos{
-    display: flex;
-    justify-content: center;
+.addTodos {
+  display: flex;
+  justify-content: center;
 }
-
-
 
 /*Text Input Field*/
 
-.todo-input{
-    min-width:15rem;
-    width:40vw;
-    max-height:2.5rem;
-    background-color:#e1ebfd;
-    border:none;
-    border-radius:5px;
-    padding:0.5rem 1rem;
-    align-self: center;
-    transition: box-shadow 1s;
+.todo-input {
+  min-width: 15rem;
+  width: 40vw;
+  max-height: 2.5rem;
+  background-color: #e1ebfd;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  align-self: center;
+  transition: box-shadow 1s;
 }
-.todo-input:hover{
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 30px 30px, rgba(0, 0, 0, 0.08) 0px -10px 20px, rgba(0, 0, 0, 0.08) 0px 3px 4px, rgba(0, 0, 0, 0.12) 0px 8px 9px, rgba(0, 0, 0, 0.05) 0px -2px 3px;
+.todo-input:hover {
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
-.todo-input:focus{
-    outline:none;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 30px 30px, rgba(0, 0, 0, 0.08) 0px -10px 20px, rgba(0, 0, 0, 0.08) 0px 3px 4px, rgba(0, 0, 0, 0.12) 0px 8px 9px, rgba(0, 0, 0, 0.05) 0px -2px 3px;
-
-
+.todo-input:focus {
+  outline: none;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
 /*priority dropdown*/
 
-.priority-dd{
-    margin-left: 10px;
-    min-width:5rem;
-    width:10vw;
-    max-height:2.5rem;
-    background-color:#e1ebfd;
-    border:none;
-    border-radius:5px;
-    padding:0.5rem 1rem;
-    align-self: center;
-    transition: box-shadow 1s;
-
+.priority-dd {
+  margin-left: 10px;
+  min-width: 5rem;
+  width: 10vw;
+  max-height: 2.5rem;
+  background-color: #e1ebfd;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  align-self: center;
+  transition: box-shadow 1s;
 }
 
-.priority-dd:hover{
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 30px 30px, rgba(0, 0, 0, 0.08) 0px -10px 20px, rgba(0, 0, 0, 0.08) 0px 3px 4px, rgba(0, 0, 0, 0.12) 0px 8px 9px, rgba(0, 0, 0, 0.05) 0px -2px 3px;
-
+.priority-dd:hover {
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
-.priority-dd:active{
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 30px 30px, rgba(0, 0, 0, 0.08) 0px -10px 20px, rgba(0, 0, 0, 0.08) 0px 3px 4px, rgba(0, 0, 0, 0.12) 0px 8px 9px, rgba(0, 0, 0, 0.05) 0px -2px 3px;
+.priority-dd:active {
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 
-    outline: none;
+  outline: none;
 }
-
 
 /*date selector*/
-.date-dd{
-    margin-left: 10px;
-    min-width:5rem;
-    width:10vw;
-    max-height:2.5rem;
-    background-color:#e1ebfd;
-    border:none;
-    border-radius:5px;
-    padding:0.5rem 1rem;
-    align-self: center;
-    transition: box-shadow 1s;
-
+.date-dd {
+  margin-left: 10px;
+  min-width: 5rem;
+  width: 10vw;
+  max-height: 2.5rem;
+  background-color: #e1ebfd;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  align-self: center;
+  transition: box-shadow 1s;
 }
 
-.date-dd:hover{
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 30px 30px, rgba(0, 0, 0, 0.08) 0px -10px 20px, rgba(0, 0, 0, 0.08) 0px 3px 4px, rgba(0, 0, 0, 0.12) 0px 8px 9px, rgba(0, 0, 0, 0.05) 0px -2px 3px;
-
+.date-dd:hover {
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
-.date-dd:active{
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 30px 30px, rgba(0, 0, 0, 0.08) 0px -10px 20px, rgba(0, 0, 0, 0.08) 0px 3px 4px, rgba(0, 0, 0, 0.12) 0px 8px 9px, rgba(0, 0, 0, 0.05) 0px -2px 3px;
+.date-dd:active {
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 
-    outline: none;
+  outline: none;
 }
 
-.add-btn{
-    margin-left: 1rem;
-    padding-top:0.1rem;
-    background-color: #271c6c;
-    color:#e1ebfd;
-    border-radius: 50%;
-    border: 2px solid #e1ebfd;
-    font-size:1.5rem;
-    width:3.2rem;
-    height: 3.2rem;
-    cursor:pointer;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    transition: box-shadow 1s;
+.add-btn {
+  margin-left: 1rem;
+  padding-top: 0.1rem;
+  background-color: #271c6c;
+  color: #e1ebfd;
+  border-radius: 50%;
+  border: 2px solid #e1ebfd;
+  font-size: 1.5rem;
+  width: 3.2rem;
+  height: 3.2rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: box-shadow 1s;
 }
 
-.add-btn:hover{
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 30px 30px, rgba(0, 0, 0, 0.08) 0px -10px 20px, rgba(0, 0, 0, 0.08) 0px 3px 4px, rgba(0, 0, 0, 0.12) 0px 8px 9px, rgba(0, 0, 0, 0.05) 0px -2px 3px;
-
+.add-btn:hover {
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
-.add-btn:focus{
-    outline:none;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 30px 30px, rgba(0, 0, 0, 0.08) 0px -10px 20px, rgba(0, 0, 0, 0.08) 0px 3px 4px, rgba(0, 0, 0, 0.12) 0px 8px 9px, rgba(0, 0, 0, 0.05) 0px -2px 3px;
-
+.add-btn:focus {
+  outline: none;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
 /*display todos*/
 
-.displaytodos{
-    margin-top: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.displaytodos {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.displaytodos .buttons{
-    margin-bottom: 2rem;
+.displaytodos .buttons {
+  margin-bottom: 2rem;
 }
 
-.displaytodos .buttons button{
-    padding: 0.5rem 1.2rem;
-    border-radius: 20px;
-    cursor: pointer;
-    border: none;
+.displaytodos .buttons button {
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  cursor: pointer;
+  border: none;
 }
 
-.displaytodos .buttons button :focus{
-    outline: none;
+.displaytodos .buttons button :focus {
+  outline: none;
 }
 
-.displaytodos .buttons button :not(:last-child){
-    margin-right: 1rem;
+.displaytodos .buttons button :not(:last-child) {
+  margin-right: 1rem;
 }
 
-.displaytodos ul{
-    list-style: none;
-    display: flex;
-    align-self: flex-start;
-    flex-wrap: wrap;
-    margin-left: 5%;
+.displaytodos ul {
+  list-style: none;
+  display: flex;
+  align-self: flex-start;
+  flex-wrap: wrap;
+  margin-left: 5%;
 }
 
-.card{
-    display: flex;
-    flex-direction: column;
-    background: rgb(180, 182, 218);
-    background: radial-gradient(
-        circle,
-        hsla(237,34%,78%,0.9)0%,
-        hsla(219,88%,94%,0.9)100%
-    );
-    margin: 0 1rem 1rem;
-    height: 8rem;
-    width: 18rem;
-    border-radius: 0.5rem;
-    padding: 1rem;
-    position: relative;
+.card {
+  display: flex;
+  flex-direction: column;
+  background: rgb(180, 182, 218);
+  background: radial-gradient(
+    circle,
+    hsla(237, 34%, 78%, 0.9) 0%,
+    hsla(219, 88%, 94%, 0.9) 100%
+  );
+  margin: 0 1rem 1rem;
+  height: 8rem;
+  width: 18rem;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  position: relative;
 }
 
-.card textarea{
-    padding:0.5rem;
-    border-radius: 8px;
-    border:none;
-    background-color: #e1ebfd;
-    color: #271c6c;
-    height: 70%;
+.card textarea {
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: none;
+  background-color: #e1ebfd;
+  color: #271c6c;
+  height: 70%;
 }
 
-.card textarea:disabled{
-    background-color: transparent;
+.card textarea:disabled {
+  background-color: transparent;
 }
 
-.card .btns{
-    position: absolute;
-    bottom: 1rem;
-    right: 1rem;   
+.card .btns {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
 }
 
-.card .btns button{
-    border-radius: 20%;
-    border:none;
-    margin:0 0.6rem;
-    font-size: 1.4rem;
-    cursor: pointer;
-    color: #271c6c;
-    background-color: transparent;
+.card .btns button {
+  border-radius: 20%;
+  border: none;
+  margin: 0 0.6rem;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: #271c6c;
+  background-color: transparent;
 }
 
-.card .btns button:focus{
-    outline:none
+.card .btns button:focus {
+  outline: none;
 }
-
 
 /*Done Button*/
 
-.completed{
-    position: absolute;
-    right: 0.5rem;
-    top: 0.5rem;
-    background-color: #1DA1F2;
-    border:  none;
-    color: #e1ebfd;
-    font-size: 0.8rem;
-    padding: 0.3rem 1rem;
-    border-radius: 20px;
-    transition: padding 2s;
+.completed {
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  background-color: #1da1f2;
+  border: none;
+  color: #e1ebfd;
+  font-size: 0.8rem;
+  padding: 0.3rem 1rem;
+  border-radius: 20px;
+  transition: padding 2s;
 }
 
-.completed:hover{
-    padding-left: 3rem;
-    padding-right: 3rem;
+.completed:hover {
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
