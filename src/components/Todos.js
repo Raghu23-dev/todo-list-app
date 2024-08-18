@@ -4,23 +4,22 @@ import { addTodos } from "../redux/reducer";
 import { GoPlus } from "react-icons/go";
 import { motion } from "framer-motion";
 
-const mapStateToProps = (state) => {
-  return {
-    todos: state,
-  };
-};
+// Map the Redux state to component props
+const mapStateToProps = (state) => ({
+  todos: state,
+});
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    addTodo: (obj) => dispatch(addTodos(obj)),
-  };
-};
+// Map dispatch functions to component props
+const mapDispatchToProps = (dispatch) => ({
+  addTodo: (obj) => dispatch(addTodos(obj)),
+});
 
 const Todos = (props) => {
   const [todo, setTodo] = useState("");
   const [priority, setPriority] = useState("Medium");
-  const [dueDate, setDueDate] = useState(new Date().toISOString().split('T')[0]);
+  const [dueDate, setDueDate] = useState(new Date().toISOString().split("T")[0]);
 
+  // Handle input changes
   const handleChange = (e) => {
     setTodo(e.target.value);
   };
@@ -33,6 +32,7 @@ const Todos = (props) => {
     setDueDate(e.target.value);
   };
 
+  // Add a new todo
   const add = () => {
     if (todo === "") {
       alert("Input is Empty");
@@ -52,17 +52,21 @@ const Todos = (props) => {
     <div className="addTodos">
       <input
         type="text"
-        onChange={(e) => handleChange(e)}
+        onChange={handleChange}
         className="todo-input"
         value={todo}
       />
-      <select className="priority-dd" onChange={handlePriorityChange} value={priority}>
+      <select
+        className="priority-dd"
+        onChange={handlePriorityChange}
+        value={priority}
+      >
         <option value="High">High</option>
         <option value="Medium">Medium</option>
         <option value="Low">Low</option>
       </select>
-      
-      <input className="date-dd"
+      <input
+        className="date-dd"
         type="date"
         onChange={handleDateChange}
         value={dueDate}
@@ -71,7 +75,7 @@ const Todos = (props) => {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         className="add-btn"
-        onClick={() => add()}
+        onClick={add}
       >
         <GoPlus />
       </motion.button>

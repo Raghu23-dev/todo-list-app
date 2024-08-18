@@ -6,11 +6,13 @@ const TodoItem = (props) => {
   const { item, updateTodo, removeTodo, completeTodos } = props;
   const inputRef = useRef(null);
 
+  // Enable input field for editing
   const changeFocus = () => {
     inputRef.current.disabled = false;
     inputRef.current.focus();
   };
 
+  // Update todo on Enter key press
   const update = (id, value, e) => {
     if (e.key === "Enter") {
       updateTodo({ id, item: value });
@@ -18,10 +20,11 @@ const TodoItem = (props) => {
     }
   };
 
+  // Styles for priority
   const priorityStyles = {
-    High: { color: 'red' },
-    Medium: { color: 'orange' },
-    Low: { color: 'green' },
+    High: { color: "red" },
+    Medium: { color: "orange" },
+    Low: { color: "green" },
   };
 
   return (
@@ -36,7 +39,7 @@ const TodoItem = (props) => {
         <button onClick={changeFocus}>
           <AiFillEdit />
         </button>
-        {item.completed === false && (
+        {!item.completed && (
           <button
             style={{ color: "green" }}
             onClick={() => completeTodos(item.id)}
@@ -49,8 +52,10 @@ const TodoItem = (props) => {
         </button>
       </div>
       {item.completed && <span className="completed">Done</span>}
-      <span className="priority-dd-show" style={priorityStyles[item.priority]}>{item.priority}<span className="date-dd-show">{item.dueDate}</span></span>
-      
+      <span className="priority-dd-show" style={priorityStyles[item.priority]}>
+        {item.priority}
+        <span className="date-dd-show">{item.dueDate}</span>
+      </span>
     </li>
   );
 };
