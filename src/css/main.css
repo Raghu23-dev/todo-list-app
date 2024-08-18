@@ -1,6 +1,7 @@
 /* General styling and imports */
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
+/* Base styles */
 html {
   line-height: 1.5;
 }
@@ -25,28 +26,32 @@ body {
 }
 
 @keyframes color {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
+/* App Container */
 .App {
   margin-top: 1rem;
   display: flex;
   flex-direction: column;
 }
 
+/* Heading Styles */
 .App h1, .App h4 {
+  font-weight: 800;
   text-align: center;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.7rem;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Add Todos Section */
 .addTodos {
   display: flex;
   justify-content: center;
@@ -132,7 +137,7 @@ body {
   outline: none;
 }
 
-/* Display Todos */
+/* Display Todos Section */
 .displaytodos {
   margin-top: 1rem;
   display: flex;
@@ -192,9 +197,7 @@ body {
   border-radius: 0.5rem;
   padding: 0.2rem;
   position: relative;
-  
 }
-
 
 .card:hover, .card:active {
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
@@ -234,10 +237,10 @@ body {
 }
 
 .card .btns {
-  position: absolute ;
+  position: absolute;
   bottom: 1rem;
   right: 1rem;
-  top:4.5rem;
+  top: 4.5rem;
 }
 
 .card .btns button {
@@ -278,10 +281,16 @@ body {
 .date-dd-show, .priority-dd-show {
   color: black;
   font-size: 0.7rem;
-  margin-left: 0.5rem;  
+  margin-left: 0.5rem;
 }
 
-.priority-dd-show{
-    position: absolute ;
-    top:4.5rem;
-  }
+.priority-dd-show {
+  position: absolute;
+  top: 4.5rem;
+}
+
+/* Image in Heading */
+h1 img {
+  vertical-align: middle;
+  margin-right: 12px;
+}
