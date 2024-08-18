@@ -49,7 +49,6 @@ body {
     display: inline;
     text-align: center;
     margin-bottom: 0.5rem;
-    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
 }
 .App h4 {
     display: inline;
@@ -62,6 +61,10 @@ body {
     justify-content: center;
 }
 
+
+
+/*Text Input Field*/
+
 .todo-input{
     min-width:15rem;
     width:40vw;
@@ -71,17 +74,76 @@ body {
     border-radius:5px;
     padding:0.5rem 1rem;
     align-self: center;
+    transition: box-shadow 1s;
+}
+.todo-input:hover{
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 30px 30px, rgba(0, 0, 0, 0.08) 0px -10px 20px, rgba(0, 0, 0, 0.08) 0px 3px 4px, rgba(0, 0, 0, 0.12) 0px 8px 9px, rgba(0, 0, 0, 0.05) 0px -2px 3px;
 }
 
 .todo-input:focus{
     outline:none;
-    border:2px solid #433aa8;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 30px 30px, rgba(0, 0, 0, 0.08) 0px -10px 20px, rgba(0, 0, 0, 0.08) 0px 3px 4px, rgba(0, 0, 0, 0.12) 0px 8px 9px, rgba(0, 0, 0, 0.05) 0px -2px 3px;
 
+
+}
+
+/*priority dropdown*/
+
+.priority-dd{
+    margin-left: 10px;
+    min-width:5rem;
+    width:10vw;
+    max-height:2.5rem;
+    background-color:#e1ebfd;
+    border:none;
+    border-radius:5px;
+    padding:0.5rem 1rem;
+    align-self: center;
+    transition: box-shadow 1s;
+
+}
+
+.priority-dd:hover{
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 30px 30px, rgba(0, 0, 0, 0.08) 0px -10px 20px, rgba(0, 0, 0, 0.08) 0px 3px 4px, rgba(0, 0, 0, 0.12) 0px 8px 9px, rgba(0, 0, 0, 0.05) 0px -2px 3px;
+
+}
+
+.priority-dd:active{
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 30px 30px, rgba(0, 0, 0, 0.08) 0px -10px 20px, rgba(0, 0, 0, 0.08) 0px 3px 4px, rgba(0, 0, 0, 0.12) 0px 8px 9px, rgba(0, 0, 0, 0.05) 0px -2px 3px;
+
+    outline: none;
+}
+
+
+/*date selector*/
+.date-dd{
+    margin-left: 10px;
+    min-width:5rem;
+    width:10vw;
+    max-height:2.5rem;
+    background-color:#e1ebfd;
+    border:none;
+    border-radius:5px;
+    padding:0.5rem 1rem;
+    align-self: center;
+    transition: box-shadow 1s;
+
+}
+
+.date-dd:hover{
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 30px 30px, rgba(0, 0, 0, 0.08) 0px -10px 20px, rgba(0, 0, 0, 0.08) 0px 3px 4px, rgba(0, 0, 0, 0.12) 0px 8px 9px, rgba(0, 0, 0, 0.05) 0px -2px 3px;
+
+}
+
+.date-dd:active{
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 30px 30px, rgba(0, 0, 0, 0.08) 0px -10px 20px, rgba(0, 0, 0, 0.08) 0px 3px 4px, rgba(0, 0, 0, 0.12) 0px 8px 9px, rgba(0, 0, 0, 0.05) 0px -2px 3px;
+
+    outline: none;
 }
 
 .add-btn{
     margin-left: 1rem;
-    padding-top:0.3rem;
+    padding-top:0.1rem;
     background-color: #271c6c;
     color:#e1ebfd;
     border-radius: 50%;
@@ -90,18 +152,26 @@ body {
     width:3.2rem;
     height: 3.2rem;
     cursor:pointer;
-    box-shadow: 2px 4px 10px #271c6c;
     display:flex;
     justify-content: center;
     align-items: center;
+    transition: box-shadow 1s;
 }
 
+.add-btn:hover{
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 30px 30px, rgba(0, 0, 0, 0.08) 0px -10px 20px, rgba(0, 0, 0, 0.08) 0px 3px 4px, rgba(0, 0, 0, 0.12) 0px 8px 9px, rgba(0, 0, 0, 0.05) 0px -2px 3px;
+
+}
 .add-btn:focus{
     outline:none;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 30px 30px, rgba(0, 0, 0, 0.08) 0px -10px 20px, rgba(0, 0, 0, 0.08) 0px 3px 4px, rgba(0, 0, 0, 0.12) 0px 8px 9px, rgba(0, 0, 0, 0.05) 0px -2px 3px;
+
 }
 
+/*display todos*/
+
 .displaytodos{
-    margin-top: 3rem;
+    margin-top: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -184,16 +254,23 @@ body {
     outline:none
 }
 
+
+/*Done Button*/
+
 .completed{
     position: absolute;
-    right: .3rem;
-    top: .3rem;
-    background-color: #867bcd;
-    border:  2px solid #272727;
+    right: 0.5rem;
+    top: 0.5rem;
+    background-color: #1DA1F2;
+    border:  none;
     color: #e1ebfd;
     font-size: 0.8rem;
     padding: 0.3rem 1rem;
     border-radius: 20px;
+    transition: padding 2s;
 }
 
-
+.completed:hover{
+    padding-left: 3rem;
+    padding-right: 3rem;
+}

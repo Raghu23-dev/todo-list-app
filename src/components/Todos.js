@@ -56,12 +56,13 @@ const Todos = (props) => {
         className="todo-input"
         value={todo}
       />
-      <select onChange={handlePriorityChange} value={priority}>
+      <select className="priority-dd" onChange={handlePriorityChange} value={priority}>
         <option value="High">High</option>
         <option value="Medium">Medium</option>
         <option value="Low">Low</option>
       </select>
-      <input
+      
+      <input className="date-dd"
         type="date"
         onChange={handleDateChange}
         value={dueDate}
