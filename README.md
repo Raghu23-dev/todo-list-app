@@ -1,6 +1,6 @@
 # To-Do List Application
 
-To access site : ![](https://todoapp-raghurr.vercel.app)
+To access site : https://todoapp-raghurr.vercel.app
 
 A To-Do list application built with React, Redux, and React Hooks. This application allows users to manage their tasks with features for adding, updating, deleting, and filtering tasks. It also includes task prioritization and due dates.
 
